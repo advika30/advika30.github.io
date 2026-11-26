@@ -64,3 +64,8 @@
 @media(max-width:800px){.impact-card{min-height:216px}}
 @media(max-width:600px){.hero-social{display:flex;flex-wrap:wrap;gap:7px;margin-top:24px}.hero-social .social-card{min-height:40px;padding:9px 10px;font-size:10px}.hero-social .social-card svg{width:14px;height:14px}.impact-card{min-height:192px;padding-top:15px;padding-bottom:15px}.impact-card:not(:first-child){padding-left:14px}.impact-label{font-size:8px;margin-bottom:9px}.impact-number{font-size:38px}.impact-card p{font-size:11px}.impact-insight{font-size:9px}.experience-role-heading{gap:11px}.company-logo{width:39px;height:39px;flex-basis:39px}.experience-role h3{font-size:16px}.experience-highlights{font-size:12px}.experience-summary{font-size:11px}}
 .visual-caption{bottom:7%;padding:13px 16px;background:rgba(255,255,255,.93);box-shadow:0 10px 30px rgba(26,69,65,.1);color:#526b67;backdrop-filter:blur(8px)}
+.company-logo img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
