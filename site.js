@@ -3,13 +3,11 @@
   const $ = (selector, root = document) => root.querySelector(selector);
   const escapeHtml = (s = "") => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const logoMarks = {
-    const logoMarks = {
-  devrev: '<img src="devrev.png" alt="">',
-  target: '<img src="target.jpg" alt="">',
-  ibm: '<img src="ibm.png" alt="">',
-  schneider: '<img src="schneider-electric.png" alt="">',
-  hpe: '<img src="hpe.jpg" alt="">'
-};
+    devrev: '<img src="devrev.png" alt="">',
+    target: '<img src="target.jpg" alt="">',
+    ibm: '<img src="ibm.png" alt="">',
+    schneider: '<img src="schneider-electric.png" alt="">',
+    hpe: '<img src="hpe.jpg" alt="">'
   };
 
   $("#about-copy").textContent = d.about;
