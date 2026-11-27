@@ -219,3 +219,21 @@ body{font-size:16px}
   .project-description{font-size:14px}
   .contact-copy{font-size:13px}
 }
+
+
+/* Gentle, one-time motion and a quiet active-section cue */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .62s ease,transform .62s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+@keyframes orbit-one-drift{from{transform:rotate(-30deg)}to{transform:rotate(330deg)}}
+@keyframes orbit-two-drift{from{transform:rotate(36deg)}to{transform:rotate(396deg)}}
+.orbit-one{animation:orbit-one-drift 52s linear infinite}
+.orbit-two{animation:orbit-two-drift 68s linear infinite}
+.project-card{transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease}
+.project-card:hover{transform:translateY(-4px);border-color:#bfd8cd}
+.main-nav a[aria-current="location"]{color:#176e65;position:relative}
+.main-nav a[aria-current="location"]::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:1px;background:#54a697}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .orbit-one,.orbit-two{animation:none}
+  .project-card{transition:none}
+}

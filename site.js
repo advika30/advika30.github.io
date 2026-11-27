@@ -66,4 +66,44 @@
   menu.addEventListener("click", event => {
     if (event.target.closest("a")) { menu.classList.remove("open"); toggle.setAttribute("aria-expanded", "false"); toggle.setAttribute("aria-label", "Open navigation"); }
   });
+
+  // Reveal content once it enters view. Reduced-motion and older browsers skip this.
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches && "IntersectionObserver" in window) {
+    const revealItems = document.querySelectorAll(
+      ".intro-band .section-kicker, .intro-content, .impact-card, .experience-item, .project-card, .education-card, .skill-group, .achievement-card, .contact-section h2, .contact-copy, .contact-section .button, .contact-links"
+    );
+    revealItems.forEach((item, index) => {
+      item.classList.add("reveal");
+      if (item.matches(".impact-card, .experience-item, .project-card, .achievement-card")) {
+        item.style.setProperty("--reveal-delay", `${(index % 4) * 65}ms`);
+      }
+    });
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    revealItems.forEach(item => revealObserver.observe(item));
+  }
+
+  // Mark the section nearest the middle of the viewport in the navigation.
+  if ("IntersectionObserver" in window) {
+    const sectionLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        sectionLinks.forEach(link => {
+          if (link.hash === `#${entry.target.id}`) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    }, { rootMargin: "-24% 0px -64% 0px", threshold: 0 });
+    sectionLinks.forEach(link => {
+      const section = document.querySelector(link.hash);
+      if (section) sectionObserver.observe(section);
+    });
+  }
 })();
