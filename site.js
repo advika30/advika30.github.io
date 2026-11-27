@@ -89,21 +89,32 @@
     revealItems.forEach(item => revealObserver.observe(item));
   }
 
-  // Mark the section nearest the middle of the viewport in the navigation.
-  if ("IntersectionObserver" in window) {
-    const sectionLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
-    const sectionObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        sectionLinks.forEach(link => {
-          if (link.hash === `#${entry.target.id}`) link.setAttribute("aria-current", "location");
-          else link.removeAttribute("aria-current");
-        });
-      });
-    }, { rootMargin: "-24% 0px -64% 0px", threshold: 0 });
-    sectionLinks.forEach(link => {
-      const section = document.querySelector(link.hash);
-      if (section) sectionObserver.observe(section);
+  // Keep the active navigation marker aligned with the section at the top of the reading area.
+  const trackedSections = ["about", "experience", "projects", "recognition"]
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
+  const sectionLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
+  const updateActiveSection = () => {
+    const marker = window.innerHeight * 0.34;
+    let currentSection = null;
+    trackedSections.forEach(section => {
+      if (section.getBoundingClientRect().top <= marker) currentSection = section;
     });
-  }
+    sectionLinks.forEach(link => {
+      if (currentSection && link.hash === `#${currentSection.id}`) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  };
+  let activeSectionFrame = 0;
+  const scheduleActiveSectionUpdate = () => {
+    if (activeSectionFrame) return;
+    activeSectionFrame = requestAnimationFrame(() => {
+      activeSectionFrame = 0;
+      updateActiveSection();
+    });
+  };
+  updateActiveSection();
+  window.addEventListener("scroll", scheduleActiveSectionUpdate, { passive: true });
+  window.addEventListener("resize", scheduleActiveSectionUpdate);
+
 })();
