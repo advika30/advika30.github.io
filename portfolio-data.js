@@ -51,9 +51,9 @@ window.portfolioData = {
     school: "M.S. Ramaiah Institute of Technology", degree: "B.E. in Computer Science · AI & ML", dates: "Dec 2021 — Jun 2025", result: "CGPA 9.36"
   }],
   achievements: [
-    { number: "Top 100", title: "JPMorgan Chase Code for Good 2024", detail: "Finalist in the global hackathon, recognized among the top 100 students worldwide." },
+    { number: "Top 100", title: "JPMorgan Chase Code for Good 2024", detail: "Finalist in the global hackathon, recognized among the top 100 students worldwide.", url: "https://lnkd.in/p/dxz3kfcz", linkLabel: "Read the LinkedIn post" },
     { number: "Best project", title: "RIT Alumni Association", detail: "Awarded for ClauseScan, an AI-powered risk intelligence platform." },
-    { number: "Selected", title: "HPE Catch Them Young", detail: "Selected among the top 25 students at my college for HPE’s Catch Them Young (CTY) program.", url: "https://medium.com/@advikag3009/how-i-got-into-hpes-catch-them-young-cty-program-and-why-you-should-too-e642ca4cb769" },
+    { number: "Top 25", title: "HPE Catch Them Young (CTY) Program", detail: "Chosen as one of my college’s top 25 students for HPE’s Catch Them Young program.", url: "https://medium.com/@advikag3009/how-i-got-into-hpes-catch-them-young-cty-program-and-why-you-should-too-e642ca4cb769" },
     { number: "SIH ’23", title: "Smart India Hackathon", detail: "Built a GAN-based desmoking and defogging system for a challenge under the Ministry of Defence theme." },
     { number: "10+ initiatives", title: "IEEE SIGHT Secretary · 2023–24", detail: "Led campus tech-for-good initiatives focused on humanitarian engineering." },
     { number: "Top 7", title: "TechNova National Hackathon", detail: "Ranked among the top 7 teams nationwide after building an SOS SMS system app." }

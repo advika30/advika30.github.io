@@ -53,7 +53,7 @@
   $("#skills-grid").innerHTML = d.skills.map(group => `
     <div class="skill-group"><h3>${escapeHtml(group.group.toUpperCase())}</h3><div>${group.items.map(item => `<span class="skill-chip">${escapeHtml(item)}</span>`).join("")}</div></div>`).join("");
   $("#achievement-grid").innerHTML = d.achievements.map(item => `
-    <article class="achievement-card"><div class="achievement-number">${escapeHtml(item.number)}</div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.detail)}</p>${item.url ? `<a class="achievement-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">Read the article ↗</a>` : ""}</article>`).join("");
+    <article class="achievement-card"><div class="achievement-number">${escapeHtml(item.number)}</div><h3>${escapeHtml(item.title)}</h3><p>${escapeHtml(item.detail)}</p>${item.url ? `<a class="achievement-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.linkLabel || "Read the article")} ↗</a>` : ""}</article>`).join("");
 
   $("#year").textContent = new Date().getFullYear();
   const menu = $(".main-nav"), toggle = $(".menu-toggle");
