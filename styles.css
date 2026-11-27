@@ -237,3 +237,30 @@ body{font-size:16px}
   .orbit-one,.orbit-two{animation:none}
   .project-card{transition:none}
 }
+
+
+/* Orbit accents echo the portrait's motif across impact, projects and recognition */
+.impact-section,.recognition-section{position:relative;isolation:isolate;overflow:hidden}
+.impact-section::before,.impact-section::after,.recognition-section::before,.recognition-section::after{content:"";position:absolute;display:block;pointer-events:none;border:1px solid rgba(48,144,132,.14);border-radius:50%;z-index:-1}
+.impact-section::before{width:360px;height:205px;top:-148px;right:-105px;animation:impact-orbit-a 76s linear infinite}
+.impact-section::after{width:255px;height:335px;top:-195px;right:-52px;border-color:rgba(48,144,132,.1);animation:impact-orbit-b 92s linear infinite}
+@keyframes impact-orbit-a{from{transform:rotate(-24deg)}to{transform:rotate(336deg)}}
+@keyframes impact-orbit-b{from{transform:rotate(32deg)}to{transform:rotate(392deg)}}
+.recognition-section::before{width:500px;height:310px;top:-55px;right:-110px;border-color:rgba(48,144,132,.12);animation:recognition-orbit-a 88s linear infinite}
+.recognition-section::after{width:385px;height:475px;top:-92px;right:-48px;border-color:rgba(48,144,132,.09);animation:recognition-orbit-b 104s linear infinite}
+@keyframes recognition-orbit-a{from{transform:rotate(-18deg)}to{transform:rotate(342deg)}}
+@keyframes recognition-orbit-b{from{transform:rotate(28deg)}to{transform:rotate(388deg)}}
+.project-index{position:relative;z-index:0}
+.project-index::before{content:"";position:absolute;left:50%;top:50%;width:31px;height:19px;border:1px solid rgba(71,157,142,.5);border-radius:50%;transform:translate(-50%,-50%) rotate(-24deg);opacity:0;pointer-events:none}
+.project-card:hover .project-index::before{opacity:1;animation:project-index-orbit 12s linear infinite}
+@keyframes project-index-orbit{from{transform:translate(-50%,-50%) rotate(-24deg)}to{transform:translate(-50%,-50%) rotate(336deg)}}
+@media(max-width:600px){
+  .impact-section::before{width:260px;height:155px;top:-100px;right:-130px}
+  .impact-section::after{width:200px;height:275px;top:-135px;right:-90px}
+  .recognition-section::before{width:340px;height:245px;top:-18px;right:-180px}
+  .recognition-section::after{width:270px;height:350px;top:-35px;right:-120px}
+}
+@media(prefers-reduced-motion:reduce){
+  .impact-section::before,.impact-section::after,.recognition-section::before,.recognition-section::after{animation:none}
+  .project-card:hover .project-index::before{animation:none}
+}
