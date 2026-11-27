@@ -179,3 +179,18 @@ img,svg{max-width:100%}
   .company-logo img{width:43px;height:43px}
   .company-logo svg{width:34px;height:34px}
 }
+
+
+/* Linked achievement stories and project demo actions */
+.achievement-card{display:flex;flex-direction:column;align-items:flex-start}
+.achievement-card p{margin-bottom:12px}
+.achievement-link{margin-top:auto;color:#247d72;font-size:11px;font-weight:600}
+.achievement-link:hover{text-decoration:underline;text-underline-offset:3px}
+.project-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.project-action{display:inline-flex;align-items:center;gap:8px;border:1px solid #cbdcd4;border-radius:3px;padding:9px 12px;color:#35675e;background:#fff;font-size:10px;font-weight:600;transition:background .2s,border-color .2s,transform .2s}
+.project-action:hover{background:#eff7f2;border-color:#96c0b2;transform:translateY(-1px)}
+.project-action-primary{background:#123f3d;border-color:#123f3d;color:#fff}
+.project-action-primary:hover{background:#1b625b;border-color:#1b625b}
+.project-action span{color:#48a090}
+.project-action-primary span{color:#b7e3d5}
+@media(max-width:600px){.project-actions{margin-top:12px}.project-action{min-height:40px}}
