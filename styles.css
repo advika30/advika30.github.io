@@ -194,3 +194,28 @@ img,svg{max-width:100%}
 .project-action span{color:#48a090}
 .project-action-primary span{color:#b7e3d5}
 @media(max-width:600px){.project-actions{margin-top:12px}.project-action{min-height:40px}}
+
+
+/* Readability and final experience refinements */
+body{font-size:16px}
+.hero-intro{font-size:17px;line-height:1.75}
+.intro-body p{font-size:15px;line-height:1.85}
+.experience-date{font-size:12px}
+.experience-role h3{font-size:19px}
+.experience-summary{font-size:14px;line-height:1.7}
+.experience-highlights{font-size:14px;line-height:1.8}
+.experience-tags .tag,.skill-chip{font-size:11px}
+.project-description{font-size:14px;line-height:1.85}
+.project-outcome{font-size:12px}
+.achievement-card h3{font-size:14px}
+.achievement-card p{font-size:12px;line-height:1.8}
+.contact-copy{font-size:14px;line-height:1.9;max-width:500px}
+.logo-hpe{border:0;padding:0;background:transparent;font-size:19px}
+@media(max-width:600px){
+  .hero-intro{font-size:16px}
+  .experience-role h3{font-size:18px}
+  .experience-summary{font-size:13px}
+  .experience-highlights{font-size:13px}
+  .project-description{font-size:14px}
+  .contact-copy{font-size:13px}
+}

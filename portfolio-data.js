@@ -4,7 +4,7 @@
  */
 window.portfolioData = {
   name: "Advika Gupta",
-  role: "Software engineer · AI & ML",
+  role: "Software Engineer · Forward Deployed Engineer · AI & ML",
   location: "Bengaluru, India",
   email: "advikag3009@gmail.com",
   links: {
@@ -24,12 +24,12 @@ window.portfolioData = {
         "Created a transcript-to-article pipeline that backfilled 20K+ meetings into searchable knowledge; shipped the Granola connector, syncing 100+ meetings daily.",
         "Led migration of legacy email tracking to a unified chat-based model, integrating 800K+ records and retiring deprecated gateway APIs."
       ],
-      tags: ["Go", "MongoDB", "APIs", "LLMs", "Production systems"]
+      tags: ["Go", "MongoDB", "Distributed systems", "APIs", "LLMs", "Production systems"]
     },
     {
       company: "Target", logo: "target", title: "Data Science Apprentice", place: "Bengaluru, India", dates: "Aug 2025 — Nov 2025",
       summary: "Supported a tax-code prediction model for more consistent automated inventory classification.",
-      highlights: ["Supported model training and evaluation using Google Cloud Vertex AI."], tags: ["Vertex AI", "Machine learning"]
+      highlights: ["Supported model training and evaluation using Google Cloud Vertex AI."], tags: ["Python", "Vertex AI", "Machine learning"]
     },
     {
       company: "IBM", logo: "ibm", title: "Software Engineer Intern", place: "Bengaluru, India", dates: "Jan 2025 — Jul 2025",
@@ -51,12 +51,12 @@ window.portfolioData = {
     school: "M.S. Ramaiah Institute of Technology", degree: "B.E. in Computer Science · AI & ML", dates: "Dec 2021 — Jun 2025", result: "CGPA 9.36"
   }],
   achievements: [
-    { number: "Selected", title: "HPE Catch Them Young", detail: "Selected among the top 25 students at my college for HPE’s Catch Them Young (CTY) program.", url: "https://medium.com/@advikag3009/how-i-got-into-hpes-catch-them-young-cty-program-and-why-you-should-too-e642ca4cb769" },
-    { number: "Top 7", title: "TechNova National Hackathon", detail: "Ranked among the top 7 teams nationwide after building an SOS SMS system app." },
-    { number: "SIH ’23", title: "Smart India Hackathon", detail: "Built a GAN-based desmoking and defogging system for a challenge under the Ministry of Defence theme." },
     { number: "Top 100", title: "JPMorgan Chase Code for Good 2024", detail: "Finalist in the global hackathon, recognized among the top 100 students worldwide." },
     { number: "Best project", title: "RIT Alumni Association", detail: "Awarded for ClauseScan, an AI-powered risk intelligence platform." },
-    { number: "10+ initiatives", title: "IEEE SIGHT Secretary · 2023–24", detail: "Led campus tech-for-good initiatives focused on humanitarian engineering." }
+    { number: "Selected", title: "HPE Catch Them Young", detail: "Selected among the top 25 students at my college for HPE’s Catch Them Young (CTY) program.", url: "https://medium.com/@advikag3009/how-i-got-into-hpes-catch-them-young-cty-program-and-why-you-should-too-e642ca4cb769" },
+    { number: "SIH ’23", title: "Smart India Hackathon", detail: "Built a GAN-based desmoking and defogging system for a challenge under the Ministry of Defence theme." },
+    { number: "10+ initiatives", title: "IEEE SIGHT Secretary · 2023–24", detail: "Led campus tech-for-good initiatives focused on humanitarian engineering." },
+    { number: "Top 7", title: "TechNova National Hackathon", detail: "Ranked among the top 7 teams nationwide after building an SOS SMS system app." }
   ],
   projects: [
     {
@@ -73,11 +73,11 @@ window.portfolioData = {
       description: "An incident triage system that helps teams see which outages matter most to customers. It scores impact, severity, urgency, and blast radius, then brings evidence and diagnosis together for a human-reviewed response.",
       outcome: "Human-approved, allowlisted remediation with auditable decision receipts posted to DevRev.",
       stack: ["Python", "AWS Bedrock", "CloudWatch", "DevRev APIs", "Streamlit"],
-      note: "Built for the AWS × DevRev Hackathon", url: ""
+      note: "Source code confidential · Built for the AWS × DevRev Hackathon", url: ""
     }
   ],
   skills: [
-    { group: "Languages", items: ["Go", "C++", "Python", "SQL", "Java", "C"] },
+    { group: "Languages", items: ["Python", "Go", "C++", "SQL", "Java", "C"] },
     { group: "Backend", items: ["REST APIs", "gRPC", "Microservices", "API design"] },
     { group: "Data & cloud", items: ["MongoDB", "MySQL", "AWS Bedrock", "CloudWatch", "Vertex AI", "Docker", "Linux", "Git"] },
     { group: "AI & ML", items: ["LLMs", "AI agents", "RAG", "LangChain", "PyTorch", "TensorFlow", "Transformers", "NLP", "Scikit-learn"] }
