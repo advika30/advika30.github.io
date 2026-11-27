@@ -168,14 +168,14 @@ img,svg{max-width:100%}
 
 
 /* Larger company marks in the experience timeline */
-.company-logo{width:52px;height:52px;flex-basis:52px}
-.company-logo img{width:38px;height:38px}
-.company-logo svg{width:30px;height:30px}
-.logo-letters{font-size:15px}
-.logo-ibm{font-size:18px}
-.logo-hpe{font-size:15px}
+.company-logo{width:64px;height:64px;flex-basis:64px}
+.company-logo img{width:50px;height:50px}
+.company-logo svg{width:38px;height:38px}
+.logo-letters{font-size:18px}
+.logo-ibm{font-size:21px}
+.logo-hpe{font-size:18px}
 @media(max-width:600px){
-  .company-logo{width:46px;height:46px;flex-basis:46px}
-  .company-logo img{width:34px;height:34px}
-  .company-logo svg{width:27px;height:27px}
+  .company-logo{width:56px;height:56px;flex-basis:56px}
+  .company-logo img{width:43px;height:43px}
+  .company-logo svg{width:34px;height:34px}
 }
